@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.7s;
+}
+
+html {
+    --background: url(../imagens/fundo.jpg);
+    --cor-predominante:rgb(163, 59, 82);
+    --fundo:#0f0f0fd2;
+}
+  
+html[data-theme="dark"] {
+    --background: #1a1a1f;
+    --cor-predominante:rgb(110, 13, 134);
+    --fundo:#282833;
+}
+
+@font-face{
+    font-family:"SuperMario";
+    src: url("../font/super-mario.woff");
+}
+
+body{
+    background:var(--background);
+    background-size: 100%;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ---------------------- HEADER ---------------------- */ 
+.menu-topo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 70px;
+    border-bottom: 2px solid var(--cor-predominante);
+    background-color:var(--fundo); 
+    flex-wrap: wrap;  
+}
+
+.menu-topo h2{
+    padding: 0px 80px;
+    color: white;
+    -webkit-text-stroke: 2px var(--cor-predominante);
+    font-size: 30px;
+    font-family:"SuperMario"; 
+}
+
+.caixa-icons{
+    padding: 0px 50px;
+    display: flex;
+}
+
+.area-icons{
+    padding: 0px 30px;
+}
+
+.area-icons img{
+    width: 30px;
+}
+
+/* ---------------------- AREA NAVEGAÇÃO ---------------------- */ 
+nav{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px; 
+}
+
+/* ---------------------- AREA LATERAL ---------------------- */ 
+.menu-lateral{
+    width: 180px;
+    margin-right: 20px;
+}
+
+.area-logo{
+    background-color: var(--fundo);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.area-logo h1{
+    font-size: 150px;
+    color: var(--cor-predominante);
+    -webkit-text-stroke: 2px white;
+    font-family:"SuperMario";
+}
+
+.area-logo span{
+    margin-bottom: 20px;
+}
+
+.area-checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fundo);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/*---------------------- CUSTOMIZAÇÃO INPUT ---------------------- */
+.area-checkbox label {
+    width:50px;
+    height:20px;
+    position: relative;
+    display: flex;
+    background: #242424;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+
+.area-checkbox label:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background:var(--cor-predominante);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.area-checkbox input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.area-checkbox input:checked + label {
+    box-shadow: inset 0px 10px 20px #ebebeb;
+}
+  
+.area-checkbox input:checked + label:after {
+    left:30px;
+    background:var(--cor-predominante);
+}
+
+.area-checkbox label, label:after {
+    transition: 0.5s
+}
+/*---------------------- FIM CUSTOMIZAÇÃO INPUT ---------------------- */
+/* ---------------------- FIM LATERAL ---------------------- */ 
+
+/* ---------------------- AREA PRINCIPAL ---------------------- */ 
+.area-principal{
+    width: 700px;
+    height: 100%;
+    padding-bottom: 30px;
+    background-color: var(--fundo);
+    border-radius: 10px;
+    flex-wrap: wrap; 
+}
+
+.area-principal h1{
+    font-size: 25px;
+    padding: 20px;
+    flex-wrap: wrap; 
+}
+
+.area-informacoes{
+    width: 100%;
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.foto-perfil img{
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid var(--cor-predominante);
+    border-radius: 10px; 
+    margin-right: 50px;
+    flex-wrap: wrap; 
+}
+
+.coluna{
+    width: 50%;
+}
+
+.area-conhecimento{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    flex-wrap: wrap; 
+}
+
+.caixa-icons-linguagens{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap; 
+}
+
+.linguagens{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.linguagens img{
+    width: 30px;
+}
+
+.linguagens span{
+    padding: 0px 15px;
+    font-size: 18px;
+}
+
+.texto-sobreMim{
+    margin-top: 20px;
+}
+
+.texto-sobreMim p{
+    margin-bottom: 10px;
+    font-size: 15px;
+    flex-wrap: wrap; 
+}
+
+.soft-skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.habilidades{
+    margin: 0px 20px;
+    width: 20%;
+    border: solid 2px var(--cor-predominante);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.habilidades p{
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.soft-skills img{
+    width: 33px;
+}
+
+/* ---------------------- AREA DOS SLIDES ---------------------- */ 
+.local-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.content{
+    width: 650px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--cor-predominante);
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+    background-color: #282833;
+}
+
+.bar{
+    width: 70px;
+    height: 17px;
+    border: 2px solid var(--cor-predominante);
+    background: var(--fundo);
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.bar:hover{
+    background: white;
+}
+
+input{
+    display: none;
+}
+
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.slide{
+    width: 20%;
+    transition: 1s;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#slide1:checked ~ .s1{
+    margin-left: 0;
+}
+
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+}
+
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+}
+
+/*---------------------- RESPONSIVO ---------------------- */
+@media all and (max-width: 1000px){
+    .menu-topo{
+        width: 100%;
+        height: 120px;
+        padding: 15px;
+    }
+    
+    .menu-topo h2{
+        width: 100%;
+        padding: 0px;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .area-principal h1{
+        font-size: 19px;
+    }
+
+    .caixa-icons{
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .area-icons{
+        padding: 0px 15px;
+    }
+
+    .area-icons img{
+        width: 25px;
+    }
+    
+    .area-logo{
+        display: none;
+    }  
+    
+    .area-checkbox{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 55px;
+        margin-right: 20px;
+        background: none;
+    }
+
+    .menu-lateral{
+        width: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .area-principal{
+        width: 95%;
+    }
+
+    .foto-perfil{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .foto-perfil img{
+        width: 75%;
+        margin-right: 0px;
+    }
+
+    .area-conhecimento{
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .texto-sobreMim p{
+        font-size: 17px;
+    }
+
+    .soft-skills{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .habilidades{
+        margin: 5px 0px;
+        width: 60%;
+        border: solid 2px var(--cor-predominante);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .habilidades p{
+        padding: 0px 20px;
+    }
+
+    .content{
+        width: 90%;
+    }
+}

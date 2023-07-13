@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/estilo.css">
+        <script src="./js/script.js" defer></script>
+        <script>
+            const changeThemeToDark = () => {
+                document.documentElement.setAttribute("data-theme", "dark");
+                localStorage.setItem("data-theme", "dark");
+            }
+            const changeThemeToLight = () => {
+                document.documentElement.setAttribute("data-theme", "light");
+                localStorage.setItem("data-theme", 'light');
+            }
+            let theme = localStorage.getItem('data-theme');
+            if (theme == 'dark') changeThemeToDark();
+        </script>
+        <title>Página Inicial</title>
+    </head>
+    <body>
+        <header>
+            <div class="menu-topo">
+                <h2>Amanda Rodrigues</h2>
+                <div class="caixa-icons">
+                    <div class="area-icons">
+                        <a href="https://github.com/MichiganRx"><img src="./imagens/icon-github.png"></a>
+                    </div>
+                    <div class="area-icons">
+                        <a href="https://www.linkedin.com/in/amanda-rodrigues-354a46249/"><img src="./imagens/icon-linkedin.png"></a>
+                    </div>
+                    <div class="area-icons">
+                        <a href="mailto:amandarodri225@gmail.com"><img src="./imagens/icon-email.png"></a>
+                    </div>                
+                </div> 
+            </div>
+        </header>
+        <nav>
+            <div class="menu-lateral">
+                <div class="area-logo">
+                    <h1>A</h1>
+                    <span>Amanda Rodrigues</span>
+                </div>
+                <div class="area-checkbox">
+                    <input type="checkbox" name="toggle-dark" id="toggle-dark">
+                    <label for="toggle-dark"></label>
+                </div>
+            </div>
+            <div class="area-principal">
+                <h1>Sobre mim </h1>
+                <div class="area-informacoes">
+                    <div class="foto-perfil">
+                        <img src="./imagens/foto-perfil.jpg">
+                    </div> 
+                    <div class="area-conhecimento">
+                        <div class="caixa-icons-linguagens">
+                            <div class="coluna">
+                                <div class="linguagens">
+                                    <img src="./imagens/icon-html.png">
+                                    <span>Html</span>
+                                </div> 
+                                <div class="linguagens">
+                                    <img src="./imagens/icon-css.png">
+                                    <span>Css</span>
+                                </div>
+                                <div class="linguagens">
+                                    <img src="./imagens/icon-python.png">
+                                    <span>Python</span>
+                                </div>
+                            </div>
+                            <div class="coluna">
+                                <div class="linguagens">
+                                    <img src="./imagens/icon-js.png">
+                                    <span>JavaScript</span>
+                                </div> 
+                                <div class="linguagens">
+                                    <img src="./imagens/icon-angular.png">
+                                    <span>Angular</span>
+                                </div>
+                                <div class="linguagens">
+                                    <img src="./imagens/icon-git.png">
+                                    <span>Git</span>
+                                </div>  
+                            </div>
+                        </div>
+                        <span class="texto-sobreMim">
+                            <p>Cursando Desenvolvimento de Sistemas na instituição SENAC e linguagem de programação JavaScript na Udemy.</p>
+                            <p>Além do JavaScript, adicionei o framework Angular na minha lista de estudos.</p>
+                        </span>  
+                    </div>
+                </div>
+                <div class="soft-skills">
+                    <div class="habilidades">
+                        <img src="./imagens/icon-criatividade.png">
+                        <p>Criatividade</p>
+                    </div> 
+                    <div class="habilidades">
+                        <img src="./imagens/icon-determinacao.png">
+                        <p>Determinação</p>
+                    </div>
+                    <div class="habilidades">
+                        <img src="./imagens/icon-organizacao.png">
+                        <p>Organização</p>
+                    </div>  
+                </div>
+                <h1>Projetos</h1>
+                <div class="local-slide">
+                    <div class="content">
+                        <div class="slides">
+                            <input type="radio" name="slide" id="slide1">
+                            <input type="radio" name="slide" id="slide2">
+                            <input type="radio" name="slide" id="slide3">
+                            <div class="slide  s1">
+                                <a href="https://michiganrx.github.io/GeoBlog/"><img src="./imagens/slides/slide-1.png"></a>
+                            </div>
+                            <div class="slide">
+                                <a href=""><img src="./imagens/slides/slide-2.png"></a>
+                            </div>
+                            <div class="slide">
+                                <a href="https://michiganrx.github.io/Site-festa-junina/"><img src="./imagens/slides/slide-3.png"></a>
+                            </div>
+                        </div>
+                        <div class="navigation">
+                            <label class="bar" for="slide1"></label>
+                            <label class="bar" for="slide2"></label>
+                            <label class="bar" for="slide3"></label>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </body>
+</html>
